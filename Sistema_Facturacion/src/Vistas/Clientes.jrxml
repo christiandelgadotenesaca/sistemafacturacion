@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6d1dd54-d23c-4660-83ac-a5705c9f928b">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     cliente_tb.`CLI_ID` AS cliente_tb_CLI_ID,
+     cliente_tb.`CLI_NOMBRE` AS cliente_tb_CLI_NOMBRE,
+     cliente_tb.`CLI_APELLIDO` AS cliente_tb_CLI_APELLIDO,
+     cliente_tb.`CLI_DIRECCION` AS cliente_tb_CLI_DIRECCION,
+     cliente_tb.`CLI_TELEFONO` AS cliente_tb_CLI_TELEFONO,
+     cliente_tb.`CLI_MAIL` AS cliente_tb_CLI_MAIL
+FROM
+     `cliente_tb` cliente_tb]]>
+	</queryString>
+	<field name="cliente_tb_CLI_ID" class="java.lang.String"/>
+	<field name="cliente_tb_CLI_NOMBRE" class="java.lang.String"/>
+	<field name="cliente_tb_CLI_APELLIDO" class="java.lang.String"/>
+	<field name="cliente_tb_CLI_DIRECCION" class="java.lang.String"/>
+	<field name="cliente_tb_CLI_TELEFONO" class="java.lang.String"/>
+	<field name="cliente_tb_CLI_MAIL" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="164" y="0" width="163" height="28" uuid="310d679a-b496-48c7-80cd-a0310b079e90"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Handwriting" size="15" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Forja Mueble]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="28" width="133" height="23" uuid="31998a2e-2c7f-4333-95f5-2d3f5788f9f2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Handwriting" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Arte y Diseño]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="1" width="144" height="20" uuid="c0b6e083-77cd-4661-945c-17860ead9587"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Listado de Clientes]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="545" height="1" uuid="10677b4d-2695-42d3-87db-e7e234248ab2"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="48" height="20" uuid="37f4595f-3946-4ba4-a5e0-ca1929e17f44"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="0" width="112" height="20" uuid="b0139bef-64aa-4201-9aba-37070cdcb922"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[NOMBRE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="117" height="20" uuid="83606879-4191-4340-a431-8c718c224648"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[APELLIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="1" width="110" height="20" uuid="ca61e85a-cee6-447f-a1f9-6ab52e6d42e8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DIRECCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="387" y="0" width="76" height="20" uuid="29e9c86c-4588-4f9d-a587-278834a0b2f4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TELEFONO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="1" width="92" height="20" uuid="c71c7e1a-b280-491d-a948-1bebbbf2a85d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[E-MAIL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="545" height="1" uuid="bd55d9ae-b0b2-45cf-9e21-0a30635cd97c"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="48" height="20" uuid="caed2c0f-eb43-4eb7-bbf5-0c9da0eb74f0"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_tb_CLI_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="0" width="112" height="20" uuid="269a56ed-1050-410b-a571-e90a0d9b4c95"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_tb_CLI_NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="117" height="20" uuid="b58f8cfe-9d31-4e9a-ad8e-214ecc127308"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_tb_CLI_APELLIDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="0" width="110" height="20" uuid="dd1f83db-d485-45bc-904b-96771a30d370"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_tb_CLI_DIRECCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="0" width="76" height="20" uuid="ae903943-4725-4ce9-8385-87509f184779"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_tb_CLI_TELEFONO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="92" height="20" uuid="7dcb3365-523e-480f-bb09-bbeca5006d80"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_tb_CLI_MAIL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>
